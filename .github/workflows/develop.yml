@@ -5,11 +5,8 @@ on:
     branches:
       - develop
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
       - name: checkout shared actions
@@ -18,6 +15,5 @@ jobs:
           repository: ${{ secrets.SHARED_ACTIONS_REPO }}
           ssh-key: ${{ secrets.SHARED_ACTIONS_KEY }}
           path: shared
-
       - name: Use shared action
         uses: ./shared/actions/jdk11
