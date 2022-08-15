@@ -18,6 +18,5 @@ jobs:
           ssh-key: ${{ secrets.SHARED_ACTIONS_KEY }}
           path: shared
 
-      - name: list files in shared repo
-        run: |
-          ls -alph shared/
+      - name: Use shared action
+        uses: ./shared/actions/jdk11
